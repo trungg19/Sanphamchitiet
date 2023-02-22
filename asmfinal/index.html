@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM FINAL</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            width: 100%;
+            height: 185px;
+        }
+        header .topbar{
+            height: 60px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 38px;
+        }
+        header .headerpage .headerpage_wapper{
+            height: 70px;
+            width: 100%;
+            padding: 10px 0;
+            align-items: center;
+        }
+        .container{
+            margin: 0 31px;
+            padding: 0 15px;
+        }
+        .container .headerpage_wapper .box1{
+            height: 60px;
+            width: 270px;
+            text-align: center;
+        }
+        .container .headerpage_wapper .box1 img{
+            width: 105px;
+            height: 60px;
+        }
+        header  .insMain{
+            width: 100%;
+            height: 37px;
+        }
+        header  .insMain .container{
+            margin: 0 31px;
+            padding: 0 15px;
+            height: 37px;
+            width: 1180px;
+        }
+        header  .insMain .container .box3{
+            width: 20%;
+            height: 35px;
+            float: left;
+            background-color: #505050;
+            text-align: center;
+            border-radius: 5px;
+        }
+        header  .insMain .container .box3 h4{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: aliceblue;
+        }
+        header  .insMain .container .box4{
+            width: 79.5%;
+            height: 35px;
+            background-color: #9f9f9f;
+            float: right;
+            border-radius: 5px;
+        }
+        header  .insMain .container .box4 li{
+            float: left;
+            list-style: none;
+            margin-bottom: 20px;
+            
+        }
+        header  .insMain .container .box4 ul{
+            margin-top: 10px;
+        }
+        header  .insMain .container .box4 li a{
+            text-decoration: none;
+            color: white;
+            margin-right: 40px;
+            margin-left: 10px;
+        }
+        .row1{
+            width: 100%;
+            height: 40px;
+            background-color: #f5f5f5;
+        }
+        .row1 .container{
+            margin: 0 31px;
+            padding: 0 15px;
+            height: 100%;
+        }
+        .row1 .container ul {
+            margin: 0;
+        }
+        .row1 .container ul li{
+            float: left;
+            list-style: none;
+            margin-top: 10px;
+        }
+        .row1 .container ul li a{
+            text-decoration: none;
+            color: #999;
+            padding-left: 10px;
+        }
+        .jkl{
+            color: #999;
+            padding-left: 10px;
+        }
+        .row2{
+            margin: 0 31px;
+            padding: 15px;
+            max-height: 1999px;
+            width: 1170px;
+        }
+        .row2 .box1{
+            width: 1170px;
+            height: 38px;
+            border-bottom: 1px black solid;
+        }
+        .row2 .box1 .box11{
+            width: 689px;
+            height:38px;
+            margin: 0;
+            padding-top: 10px;
+        }
+        .row2 .box1 .box11 h1{
+            font-size: 18px;
+            margin: 0;
+        }
+        .row2 .box2{
+            min-height: 867px;
+            width: 1170px;
+        } 
+        .row2 .box2{
+            height: 867px;
+            width: 1170px;
+            margin: 0;
+            padding: 0;
+        }
+        .row2 .box2 .box21{
+            width: 420px;
+            height: 867px;
+            float: left;
+            margin-right: 30px;
+            text-align: center;
+        }
+        .row2 .box2 .box22{
+            width: 700px;
+            height: 867px;
+            float: right;
+        }
+        .row2 .box2 .box21 img{
+            width: 420px;
+            height: 420px;
+        }
+        .row2 .box2 .box21 span a{
+            text-decoration: none;
+        }
+        .row2 .box2 .box21 .box211{
+            padding-left: 110px;
+            margin-top: 20px;
+            height: 60px;
+        }
+        .row2 .box2 .box21 .box211 a{
+            margin: 10px;
+            float: left;
+            height: 45px;
+            width: 45px;
+            border: 1px black solid;
+        }  
+        .row2 .box2 .box21 .box212{
+            padding-left: 100px;
+        }
+        .row2 .box2 .box21 .box212 img{
+            height: 45px;
+            width: 45px;
+        }
+        .row2 .box2 .box21 .policy{
+            height: 137px;
+            width: 420px;
+            padding-top: 15px;
+        }
+      
+        .row2 .box2 .box21 .policy li{
+            list-style: none;
+            float: left;
+            margin-right: 5px;
+            margin-top: 20px;
+            border-bottom: solid 1px black;
+            margin-left: 10px;
+        }
+        .row2 .box2 .box22 .box1{
+            height: 107px;
+            width: 700px;
+            padding-top: 30px;
+        }
+        .row2 .box2 .box22 .box1 #a1{
+            margin: 20px;
+            font-size: 38px;
+            color: red;
+            font-weight: 900;
+            margin-right: 500px;
+        }
+        .row2 .box2 .box22 .box1 a{
+            padding-top: 50px;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .row2 .box2 .box22 .box1 .cuaa{
+            width: 700px;
+            height: 50px;
+            padding-top: 40px;
+        }
+        .row2 .box2 .box22 .box2 .parameter__title{
+            padding-top: 25px;
+            margin-bottom: 20px;
+        }
+        .row2 .box2 .box22 .box2 .box21a{
+            max-height: 500px;
+            width: 700px;
+            margin: 15px 0;
+        }
+        .row2 .box2 .box22 .box2 .box21a table tr:nth-child(2n){
+                background-color: lightgray;
+    
+            
+        }
+        .row2 .box2 .box22 .box2 .box21a table{
+            padding: 7px 10px;
+        }
+        .row2 .box2 .box22 .box2 .box21a table .strong{
+            font-weight: 700;
+            padding: 7px 10px;
+        }
+        .row2 .box2 .box22 .box2 .box22a{
+            width: 700px;
+            height: 122px;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a1{
+            width: 100%;
+            height: 33px;
+            background-color: red;
+            text-align: center;
+            padding-top: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a1 a{
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a2{
+            width: 345px;
+            height: 35px;
+            float: left;
+            text-align: center;
+            background-color: blue;
+            border-radius: 5px;
+            padding-top: 20px;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a2 a{
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a3{
+            width: 345px;
+            height: 40px;
+            float: right;
+            text-align: center;
+            background-color: blue;
+            border-radius: 5px;
+            padding-top: 15px;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a3 a{
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+            margin-left: 35px;
+            margin-right: 40px;
+        }
+        .row2 .box2 .box22 .box2 .box22a .box22a3 span{
+            margin-left: 70px;
+            margin-right: 80px;
+            color: white;
+            font-size: 13px;
+        }
+        .row2 .box2 .box22 .box2 .box23a{
+           height: 17px;
+           width: 700px;
+           margin-top: 90px;
+           text-align: center;
+        }
+        .row2 .box3{
+            height: 450px;
+            width: 1170px;
+        }
+        .row2 .box3 h2{
+            color: orange;
+        }
+        footer{
+            width: 100%;
+            height: 342px;
+        }
+        footer .container{
+            margin: 0 auto;
+            padding: 0 15px;
+            min-height: 270px;
+        }
+        footer .container .box1{
+            height: 155px;
+            width: 270px;
+            float: left;
+            padding-left: 20px;
+        }
+        footer .container .box2{
+            height: 200px;
+            width: 270px;
+            float: left;
+            padding-left: 20px;
+        }
+        footer .container .box3{
+            height: 100px;
+            width: 270px;
+            float: left;
+            padding-left: 20px;
+        }
+        footer .container .box4{
+            height: 155px;
+            width: 270px;
+            float: left;
+            padding-left: 20px;
+            
+        }
+        footer .container a{
+            text-decoration: none;
+            color: #505050;
+        }
+         footer .container li{
+            list-style: none;
+            float: left;
+        }
+         footer .container ul{
+            margin-left: 0;
+        }
+        footer .container img{
+            margin-top: 80px;
+            margin-right: 1000px;
+            height: 40px;
+            width: 80px;
+            float: left;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <img src="img/h1.webp" alt="">
+        </div>
+        <div class="headerpage">
+            <div class="container">
+                <div class="headerpage_wapper">
+                    <div class="box1">
+                        <img src="img/logosao.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="insMain">
+            <div class="container">
+                <div class="box3">
+                    <h4>DANH MỤC SẢN PHẨM</h4>
+                </div>
+                <div class="box4">
+                    <ul>
+                        <li><a href="#">Lắp đặt phòng net</a></li>
+                        <li><a href="#">Trả góp</a></li>
+                        <li><a href="#">Bảng giá</a></li>
+                        <li><a href="#">Xây dựng cấu hình</a></li>
+                        <li><a href="#">Kiểm tra bảo hành</a></li>
+                        <li><a href="#">Thiết bị Mini</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="insmain">
+        <div class="row1">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li class="jkl">  /</li>
+                    <li><a href="#">[HOT]6.CPU Intel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="box1">
+                <div class="box11">
+                    <h1>CPU Intel Core i3 12100F TRAY (3.30 Up to 4.30GHz)</h1>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="box21">
+                    <img src="img/h2.webp" alt="">
+                    <span> <a href="#">Xem tất cả hình</a></span>
+                    <span>(1/1)</span>
+                    <div class="box211">
+                        <a href="#">
+                        </a>
+                        <a href="#">
+                        </a>
+                        <a href="#">
+                        </a>
+                    </div>
+                    <div class="policy">
+                        <ul>
+                            <li>Chính sách bảo hành 
+                                <a href="#">Xem chi tiết</a>
+                            </li>
+                            <li>Bảo hành: 36 tháng</li>
+                            <li>Cam kết chính hãng 100%</li>
+                            <li><a href="#">1900 0243</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box22">
+                    <div class="box1">
+                        <span id="a1">2,150,000đ</span>
+                        <div class="cuaa">
+                            <a href="#">Xem siêu thị còn hàng</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="parameter__title">
+                            <b>Mã sản phẩm:</b>
+                            <span>I3.12100F.TR</span>
+                        </div>
+                        <div class="box21a">
+                            <h2>Thông số sản phẩm:</h2>
+                            <table>
+                                <tr>
+                                    <td class="strong">Model</td>
+                                    <td>Bộ vi xử lý Intel Core i3 gen 12th</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Số hiệu xử lí</td>
+                                    <td>i3-12100F</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Số nhân</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Số luồng</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Tần số turbo tối đa</td>
+                                    <td>4.30 GHz</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Tần số turbo tối đa của lõi hiệu suất</td>
+                                    <td>4.30 GHz</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Tần số cơ bản của lõi hiệu suất</td>
+                                    <td>3.30 GHz</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Bộ nhớ đệm</td>
+                                    <td>12 MB Intel Smart Cache</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Total L2 cache</td>
+                                    <td>5 MB</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Công suất cơ bản</td>
+                                    <td>58 W</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Công suất tối đa</td>
+                                    <td>89 W</td>
+                                </tr>
+                                <tr>
+                                    <td class="strong">Các loại bộ nhớ</td>
+                                    <td>Up to DDR5 4800 MT/s
+                                        Up to DDR4 3200 MT/s</td>
+                                </tr>
+                            </table>
+                            <div class="box22a">
+                                <div class="box22a1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                                <div class="box22a2">
+                                    <a href="#">THÊM VÀO GIỎ HÀNG</a>
+                                </div>
+                                <div class="box22a3">
+                                    <a href="#">TRẢ GÓP 0% QUA THẺ</a>
+                                    <span>Visa, Mastercard, JCB, Amex</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box23a">
+                            <span>Gọi đặt mua <a href="#">1900 0243</a> (7:30 - 22:00)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <h2>Giới thiệu CPU Intel Core i3 12100F ( Alder Lake | Socket 1700 )</h2>
+                <ul>
+                    <li>Bộ Sưu Tập Sản Phẩm: 12th Generation Intel® Core™ i3 Processors</li>
+                    <li>Tên mã: Alder Lake trước đây của các sản phẩm</li>
+                    <li>Số hiệu Bộ xử lý: i3-12100F</li>
+                </ul>
+                <h3>Thông tin kỹ thuật CPU</h3>
+                <ul>
+                    <li>Số lõi: 4</li>
+                    <li># of Performance-cores: 4</li>
+                    <li># of Efficient-cores: 0</li>
+                    <li>Số luồng: 8</li>
+                    <li>Tần số turbo tối đa: 4.30 GHz</li>
+                    <li>Performance-core Max Turbo Frequency: 4.30 GHz</li>
+                    <li>Performance-core Base Frequency: 3.30 GHz</li>
+                    <li>Bộ nhớ đệm: 12 MB Intel® Smart Cache</li>
+                    <li>Total L2 Cache: 5 MB</li>
+                    <li>Processor Base Power: 58 W</li>
+                    <li>Maximum Turbo Power: 89 W</li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="box1">
+                    <h4>GIỚI THIỆU THNS</h4>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tư vấn mua hàng</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="box2">
+                    <h4>CHÍNH SÁCH CHUNG</h4>
+                    <ul>
+                        <li><a href="#">Chính sách trá góp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a href="#">Chính sách bảo vệ thông tin cá nhân</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi - trả hàng</a></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <h4>THÔNG TIN KHUYẾN MÃI</h4>
+                    <ul> 
+                        <li> <a href="#">Tổng hợp khuyến mãi</a> </li>
+                        <li> <a href="#">VGA giảm sâu</a> </li>
+                    </ul>
+                </div>
+                <div class="box4">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Tổng hợp Hotline CSKH, phản ảnh</a></li>
+                        <li><a href="#">Thông tin thanh toán</a></li>
+                        <li><a href="#">Lắp đặt phòng net</a></li>
+                        <li><a href="#">Thiết bị Mining</a></li>
+                    </ul>
+                </div>
+                <img src="img/banner_1_footer_medium.webp" alt="">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
